@@ -17,7 +17,14 @@ stopGlassfishSever
 cleanLogsAppE2ew
 cleanCacheGlassfish
 stopGlassfishSever
+cache=`cat $pathGlassfishdomain | grep 'enabled="false"'`
+if [ -z "$cache" ]
+then
 sed -i 's/virtual-servers="server"/virtual-servers="server" enabled="false"/g' $pathGlassfishdomain
+else
+echo "OJO aplicación ya estan disable"
+fi
+
 sed -i '/-De2ewsecurity.db.url/d' $pathGlassfishdomain
 sed -i '/-De2ewsecurity.db.userspi/d' $pathGlassfishdomain
 sed -i '/-De2ewsecurity.db.usereic/d' $pathGlassfishdomain
