@@ -6,7 +6,7 @@ require_once('Clientes/metadata.php');
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/">
 			<span class="glyphicon glyphicon-cloud" aria-hidden="true" ></span>
-			e2ew
+			e2ew Web
 			</a>
 		</div>
 			<ul class="nav navbar-nav">
