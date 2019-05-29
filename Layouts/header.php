@@ -17,13 +17,14 @@ require_once('Clientes/metadata.php');
 		 				<ul class="dropdown-menu">
 			 				<li> <a href="<?php echo $enlace_actual;?>/HOMEBANKING/" target="_blank">e-Banking</a></li>
 			 				<!--li><a href="<?php echo $enlace_actual;?>/bmi/appn1.init()" target="_blank">BMI</a></li-->
-							<li><a href="?menu=panel">Panel</a></li>							
+							<!--li><a href="?menu=panel">Panel</a></li-->	
 		 			</ul>
 	 </li>
 				</li>
-				<!--li>
-					<a href="?menu=mostrar">Ver Estados</a>
-				</li-->		
+				<li>
+					<!--a href="?menu=mostrar">Ver Estados</a-->
+					<a href="?menu=panel">Estados</a>
+				</li>		
 				
 								<li class="dropdown">
 		 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Logs
