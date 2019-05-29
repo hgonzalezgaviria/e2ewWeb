@@ -15,16 +15,15 @@ require_once('Clientes/metadata.php');
 		 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">App
 		 				<span class="caret"></span></a>
 		 				<ul class="dropdown-menu">
-			 				<li> <a href="<?php echo $enlace_actual;?>/EICW/initAppn1.start()" target="_blank">EIC</a></li>
+			 				<li> <a href="<?php echo $enlace_actual;?>/HOMEBANKING/" target="_blank">e-Banking</a></li>
 			 				<!--li><a href="<?php echo $enlace_actual;?>/bmi/appn1.init()" target="_blank">BMI</a></li-->
-							<li><a href="?menu=panel">Panel</a></li>
-							<li><a href="javascript:myModal('<?php echo $enlace_actual;?>/emr/');">Add app to EMR</a></li>
+							<li><a href="?menu=panel">Panel</a></li>							
 		 			</ul>
 	 </li>
 				</li>
-				<li>
+				<!--li>
 					<a href="?menu=mostrar">Ver Estados</a>
-				</li>		
+				</li-->		
 				
 								<li class="dropdown">
 		 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Logs

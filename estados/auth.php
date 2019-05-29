@@ -3,7 +3,7 @@
 require_once('Clientes/metadata.php');
 $estado='Inactivo';
 $estEICEAI='Inactivo';
-$url='http://'.$ip.':8080/EICW/services/servicesEIC?wsdl';
+$url='http://'.$ip.':8080/app_auth/';
 $urlState='http://'.$ip.':8080/EICW/servlet/StateEIC';
 $content="";
 //echo $url;

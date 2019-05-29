@@ -27,14 +27,11 @@ case $1 in
 			echo "Actualizando dependencias glassfish" >> /u01/app/hbuser/product/e2ew/logs/service.log
 			echo "AS_ADMIN_ALIASPASSWORD="$AS_ADMIN_ALIASPASSWORD >> $pathPass
 			startGlassfishSever
-			echo "Inicio temp server" >> /u01/app/hbuser/product/e2ew/logs/service.log
-			#/u01/app/hbuser/product/glassfish4/glassfish/bin/asadmin --port 4848 --host localhost  create-jvm-options -De2ewsecurity.db.useremr=$E2EWSECURITY_DB_USEREMR
-			$pathGlassfish --port 4848 --host localhost  --user=admin --interactive=false  --passwordfile $pathPass create-jvm-options -De2ewsecurity.db.useremr=$E2EWSECURITY_DB_USEREMR
-			echo "Actualizando dependencias glassfish --> add user EMR" >> /u01/app/hbuser/product/e2ew/logs/service.log
-			#/u01/app/hbuser/product/glassfish4/glassfish/bin/asadmin --port 4848 --host localhost  create-jvm-options -De2ewsecurity.db.userspi=$E2EWSECURITY_DB_USERSPI
+			echo "Inicio temp server" >> /u01/app/hbuser/product/e2ew/logs/service.log		
+			$pathGlassfish --port 4848 --host localhost  --user=admin --interactive=false  --passwordfile $pathPass create-jvm-options -De2ewsecurity.db.usere2f=$E2EWSECURITY_DB_USERE2F
+			echo "Actualizando dependencias glassfish --> add user e2f" >> /u01/app/hbuser/product/e2ew/logs/service.log
 			$pathGlassfish --port 4848 --host localhost  --user=admin --interactive=false  --passwordfile $pathPass create-jvm-options -De2ewsecurity.db.userspi=$E2EWSECURITY_DB_USERSPI
 			echo "Actualizando dependencias glassfish --> add user SPIder" >> /u01/app/hbuser/product/e2ew/logs/service.log
-			#/u01/app/hbuser/product/glassfish4/glassfish/bin/asadmin --port 4848 --host localhost  create-jvm-options -De2ewsecurity.db.usereic=$E2EWSECURITY_DB_USEREIC
 			$pathGlassfish --port 4848 --host localhost  --user=admin --interactive=false  --passwordfile $pathPass create-jvm-options -De2ewsecurity.db.usereic=$E2EWSECURITY_DB_USEREIC
 			echo "Actualizando dependencias glassfish --> add user ECI" >> /u01/app/hbuser/product/e2ew/logs/service.log
 			#/u01/app/hbuser/product/glassfish4/glassfish/bin/asadmin --port 4848 --host localhost  create-jvm-options -De2ewsecurity.db.url=$E2EWSECURITY_DB_URL

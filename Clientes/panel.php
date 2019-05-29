@@ -22,10 +22,9 @@ cursor: default;
 
 <?php
 
-	require_once('estados/eic.php');
-	require_once('estados/e2di.php');
-	require_once('estados/bmi.php');
-	require_once('estados/mbank.php');	
+	
+	require_once('estados/auth.php');	
+	require_once('estados/hb.php');	
 ?>
 <div class="container">
   <h1>Estado de Aplicaciones</h1>
@@ -48,7 +47,7 @@ cursor: default;
   <tbody>
     <tr>
       <th scope="row"></th>
-      <td>EIC</td>
+      <td>AUTH</td>
       <td><?php
 	  $tas=$estado;
 	   if($estado=="Activo"){        
@@ -56,15 +55,8 @@ cursor: default;
     }elseif($estado=="Inactivo"){
         echo "<img src='img/nok.png' border='0' width='20' height='20'>";
 	}?></td>
-      <td><?php
-	  $tas=$estEICEAI;
-	   if($estEICEAI=="Activo"){        		
-		//echo "<a href='javascript:myModal('".$enlace_actual."/EICW/servlet/StateEIC');'> <img src='img/ok.png' border='0' width='20' height='20' ></a>";
-		echo "<img src='img/ok.png' border='0' width='20' height='20'>";
-    }elseif($estEICEAI=="Inactivo"){
-        echo "<img src='img/nok.png' border='0' width='20' height='20'>";
-	}?></td>
-	<td><a href="javascript:myModal('<?php echo $enlace_actual;?>/EICW/servlet/StateEIC');"><span data-toggle="tooltip" title="EICW STATUS" class="glyphicon glyphicon-link"></span></a>	</td>					
+      <td></td>
+	<td><a href="javascript:myModal('<?php echo $enlace_actual;?>/app_auth/');"><span data-toggle="tooltip" title="AUTH STATUS" class="glyphicon glyphicon-link"></span></a>	</td>					
     </tr>
     <!--tr>
       <th scope="row"></th>
@@ -103,10 +95,10 @@ cursor: default;
         echo "<img src='img/nok.png' border='0' width='20' height='20'>";
 	}?></td>
 	<td><a href="javascript:myModal('<?php echo $enlace_actual;?>/bmi/servlet/State');"><span data-toggle="tooltip" title="BMI STATUS" class="glyphicon glyphicon-link"></span></a>	</td>	
-    </tr>	
+    </tr-->	
 	    <tr>
       <th scope="row"></th>
-         <td>MBANK</td>
+         <td>HB</td>
       <td><?php
 	  $tas=$estmbank;
 	   if($estmbank=="Activo"){        
@@ -121,8 +113,8 @@ cursor: default;
     }elseif($estEAImbank=="Inactivo"){
         echo "<img src='img/nok.png' border='0' width='20' height='20'>";
 	}?></td>
-	<td><a href="javascript:myModal('<?php echo $enlace_actual;?>/mBank/servlet/Status');"><span data-toggle="tooltip" title="mBank STATUS" class="glyphicon glyphicon-link"></span></a>	</td>	
-    </tr-->
+	<td><a href="javascript:myModal('<?php echo $enlace_actual;?>/HOMEBANKING/servlet/State');"><span data-toggle="tooltip" title="HB STATUS" class="glyphicon glyphicon-link"></span></a>	</td>	
+    </tr>
   </tbody>
 </table>
   </div>

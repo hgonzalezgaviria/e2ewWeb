@@ -25,7 +25,7 @@ $enlace_actual = 'http://'.$_SERVER['HTTP_HOST'];
 if ($enlace_actual=='http://e2ew.inttegrio-aws.com'){ //dns actual (ELB)
 		$enlace_actual = 'http://'.$_SERVER['HTTP_HOST'];
 	}else{
-		$enlace_actual = 'http://'.$_SERVER['HTTP_HOST'].':8080';
+		$enlace_actual = 'https://'.$_SERVER['HTTP_HOST'].':8181';
 	}
 
 //var_dump($ip);
